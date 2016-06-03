@@ -1,5 +1,5 @@
 {
-    "name": "junker/php-debugbar-smarty",
+    "name": "junker/debugbar-smarty",
     "description": "Smarty Collector for PHP DebugBar",
     "keywords": ["php debugbar","debugbar", "smarty", "collector"],
     "license": "MIT",
