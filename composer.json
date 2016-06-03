@@ -1,0 +1,17 @@
+{
+    "name": "junker/php-debugbar-smarty",
+    "description": "Smarty Collector for PHP DebugBar",
+    "keywords": ["php debugbar","debugbar", "smarty", "collector"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Dmitry Kosenkov",
+            "email": "dk-junker@ya.ru"
+        }
+    ],
+    "autoload": {
+        "psr-0" : {
+            "Junker" : "src/"
+        }
+    }
+}
