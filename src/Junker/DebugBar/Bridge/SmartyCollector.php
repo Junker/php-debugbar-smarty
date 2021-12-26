@@ -58,6 +58,7 @@ class SmartyCollector extends DataCollector implements Renderable
 			}
         }
 
+	$data['var_count'] = count($data);
         return $data;
 	}
 
@@ -77,6 +78,10 @@ class SmartyCollector extends DataCollector implements Renderable
                 "widget" => $widget,
                 "map" => "smarty",
                 "default" => "{}"
+            ),
+	    "smarty:badge" => array(
+                "map" => "smarty.var_count",
+                "default" => 0
             )
         );
     }
