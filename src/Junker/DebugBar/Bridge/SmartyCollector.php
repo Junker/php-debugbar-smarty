@@ -60,9 +60,7 @@ class SmartyCollector extends DataCollector implements Renderable
 			}
 		}
 
-		$data['var_count'] = count($data);
-
-		return $data;
+		return ['vars' => $data, 'count' => count($data)];
 	}
 
 	public function getName()
@@ -79,11 +77,11 @@ class SmartyCollector extends DataCollector implements Renderable
 			"smarty" => array(
 				"icon" => "tags",
 				"widget" => $widget,
-				"map" => "smarty",
+				"map" => "smarty.vars",
 				"default" => "{}"
 			),
 		"smarty:badge" => array(
-				"map" => "smarty.var_count",
+				"map" => "smarty.count",
 				"default" => 0
 			)
 		);
