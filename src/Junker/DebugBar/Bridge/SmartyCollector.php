@@ -48,6 +48,8 @@ class SmartyCollector extends DataCollector implements Renderable
 
 	public function collect()
 	{
+		$data = [];
+
 		$vars = $this->smarty->getTemplateVars();
 
 		foreach ($vars as $idx => $var) {
