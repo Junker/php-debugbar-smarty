@@ -56,10 +56,11 @@ class SmartyCollector extends DataCollector implements Renderable
 			} else {
 				$data[$idx] = $this->getDataFormatter()->formatVar($var);
 			}
-        }
+		}
 
-	$data['var_count'] = count($data);
-        return $data;
+		$data['var_count'] = count($data);
+
+		return $data;
 	}
 
 	public function getName()
@@ -67,22 +68,22 @@ class SmartyCollector extends DataCollector implements Renderable
 		return 'smarty';
 	}
 
-    public function getWidgets()
-    {
-        $widget = $this->isHtmlVarDumperUsed()
-            ? "PhpDebugBar.Widgets.HtmlVariableListWidget"
-            : "PhpDebugBar.Widgets.VariableListWidget";
-        return array(
-            "smarty" => array(
-                "icon" => "tags",
-                "widget" => $widget,
-                "map" => "smarty",
-                "default" => "{}"
-            ),
-	    "smarty:badge" => array(
-                "map" => "smarty.var_count",
-                "default" => 0
-            )
-        );
-    }
+	public function getWidgets()
+	{
+		$widget = $this->isHtmlVarDumperUsed()
+			? "PhpDebugBar.Widgets.HtmlVariableListWidget"
+			: "PhpDebugBar.Widgets.VariableListWidget";
+		return array(
+			"smarty" => array(
+				"icon" => "tags",
+				"widget" => $widget,
+				"map" => "smarty",
+				"default" => "{}"
+			),
+		"smarty:badge" => array(
+				"map" => "smarty.var_count",
+				"default" => 0
+			)
+		);
+	}
 }
